@@ -62,6 +62,9 @@ body {
     -moz-transition: opacity ease-in-out .3s;
     -ms-transition: opacity ease-in-out .3s;
     transition: opacity ease-in-out .3s; }
+    
+.top-bar.light #navigation img {
+	margin-top: 5px; }
 
 .menu {
   width: 50%;
