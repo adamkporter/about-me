@@ -1,0 +1,438 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Adam Porter</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,900,900i" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/scss/custom.css">
+
+    <!-- JS -->
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- NAV BACKGROUND JS -->    
+    <script type="text/javascript">
+
+          $(function() {
+              var header = $(".top-bar");
+              $(window).scroll(function() {    
+                  var scroll = $(window).scrollTop();
+              
+                  if (scroll >= 350) {
+                      header.addClass("light");
+                      
+                  } else {
+                      header.removeClass("light").addClass('top-bar');
+                  }
+              });
+          });
+
+          $(window).scroll(function(){
+            $(".hero").css("opacity", 1 - $(window).scrollTop() / 375);
+          });
+    </script>
+  </head>
+  <body>
+
+<!-- Hero --> 
+<!-- Navigation Bar --> 
+
+    <div class="large-12 columns" id="background-grid">
+      <div class="small-2 columns"></div>
+      <div class="small-2 columns"></div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns top-bar">
+        <div class="large-12 columns top-bar-right" id="navigation" data-sticky-container>
+         <!-- <nav class="columns sticky" data-sticky data-anchor="exampleId" data-sticky-on="large"> -->
+            <a href="#"><img src="img/logo.png"></a>
+            <a class="toggleMenu" href="#" style="display: none;">Menu</a>
+            <ul class="horizontal " data-magellan>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#experience">Experience &amp; Skills</a></li>
+              <li><a href="#hobbies">Outside of Work</a></li>
+              <li><a href="#contact">Let's Talk!</a></li>
+            </ul>
+          <!-- </nav> -->
+        </div>
+      </div>
+
+      
+<!-- Above the fold --> 
+
+      <div class="large-12 columns hero" id="aboveTheFold">
+        <h1>Hello Everyone - <span>Thank you for<br>taking time to learn more about me</span></h1>
+      </div>
+<!-- End Hero -->  
+    </div>
+
+
+<!-- Education --> 
+    <div class="row education" id="education">
+
+      <!-- Education Navigation -->
+      <div class="large-10 columns" id="education-nav">
+        <h1 class="label-light">Education</h1>
+        <ul class="tabs" data-tabs id="example-tabs">
+          <li class="tabs-title is-active"><a href="#kstate" aria-selected="true"><img src="img/k-state.png"></a></li>
+          <li class="tabs-title"><a href="#treehouse"><img src="img/treehouse.png"></a></li>
+          <li class="tabs-title"><a href="#mc"><img src="img/mc.png"></a></li>
+        </ul>
+
+        <!-- Education Content -->
+        <div class="tabs-content" data-tabs-content="example-tabs">
+
+        <!-- K-State -->
+          <div class="tabs-panel is-active" id="kstate">
+            <div class="row">
+                <div class="small-6 columns">
+                  <div>
+                    <h6><i>2010 - 2012</i></h6>
+                    <h4>Entrepreneurship Major,<br>Track &amp; Cross Country</h4>
+                    <p>I attended Kansas State University for two years on a track and field scholarship. Although I had success on the track, I wasn't sure what I wanted to do for the rest of my life quite yet. I took a gap year after my Sophomore year, which led me to discover my passion for technology.</p>
+                    <ul id="school-bullets">
+                      <li>SAAC Representative</li>
+                      <li>All-Big XII First Team</li>
+                      <li>Indoor Track Newcomer of the Year</li>
+                      <li>Cross Country Newcomer of the Year</li>  
+                    </ul>
+                  </div>
+                </div>
+                <!-- Seperator -->
+                <div class="small-6 columns">
+                  <div id="block"></div>
+                  <div id="block2"></div>
+                  <img src="img/catsa.jpg">
+                </div>
+            </div>
+          </div>
+
+          <!-- Team Treehouse -->
+          <div class="tabs-panel" id="treehouse">
+            <div class="row">
+                <div class="small-6 columns">                  
+                  <div>
+                      <h6><i>2012 - 2013</i></h6>
+                      <h4>Self-led Studies in<br>Design &amp; Technology</h4>              
+                      <p>During my gap year, I began learning code from Team Treehouse - it was so addictive. This year fueled my interest in design and technology. I still remember the feeling I had when I launched my first website! To date, I have earned <strong>more points than 98%</strong> of all Treehouse students.</p>
+                      <ul id="school-bullets">
+                        <li>HTML5, CSS3, Sass</li>
+                        <li>Adobe Illustrator, Photoshop, &amp; InDesign</li>
+                        <li>JavaScript, PHP</li>
+                        <li>Sketch 3</li>  
+                        <li>InVision</li> 
+                      </ul>
+                  </div>
+
+                </div>          
+                <!-- Seperator -->
+                <div class="small-6 columns">
+                  <div id="block3"></div>
+                  <img src="img/tree.png">
+                </div>
+            </div>
+          </div>
+          
+          <!-- McPherson College -->
+          <div class="tabs-panel" id="mc">
+            <div class="row">
+                <div class="small-6 columns">
+                  <div>
+                    <h6><i>2014 - 2015</i></h6>
+                    <h4>B.S. Visual Communications<br>Entrepreneurship Minor, 3.89</h4>
+                    <p>With my newfound passion in hand, and a goal of joining a technology company after earning my degree, my last two years of college became very concentrated. At McPherson College, I designed and pitched my own degree plan to the academic committee. I deconstructed the graphic design degree and replaced fine-art courses with classes in math, business, technology, and communications. The goal of my degree plan was to prepare for a career in technology. I combined my formal education with mentorship from industry professionals and modern tools like Team Treehouse, Code Academy, and Skillshare.</p>
+                    <ul id="school-bullets">
+                      <li>Volunteer: Etch Marketing &amp; Design</li>
+                      <li>Tutor: HTML, CSS, Web Design</li>
+                      <li>Dean's High Honor Roll</li>
+                      <li>2014 Global Enterprise Challenge Winner</li>  
+                    </ul>
+                  </div>
+                </div>
+                <!-- Seperator -->
+                <div class="small-6 columns">
+                  <div id="blockv"></div>
+                  <div id="blockv2"></div>
+                  <img src="img/mac.jpg">
+                </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- END Content -->
+
+      </div>
+
+    </div>
+
+
+<!-- Experience -->
+    <div class="row experience" id="experience">
+
+      <!-- experience Navigation -->
+      <div class="large-10 columns" id="experience-nav">
+        <h1 class="label-light">Experience &amp; Skills</h1>
+        <ul class="tabs" data-tabs id="example-tabs">
+          <li class="tabs-title is-active"><a href="#independent" aria-selected="true"><img src="img/independent.png"></a></li>
+          <li class="tabs-title"><a href="#sporting"><img src="img/sporting.png"></a></li>
+          <li class="tabs-title"><a href="#atelier"><img src="img/atelierdp.png"></a></li>
+          <li class="tabs-title"><a href="#founder"><img src="img/craft.png"></a></li>
+        </ul>
+
+        <!-- experience Content -->
+        <div class="tabs-content" data-tabs-content="example-tabs">
+
+        <!-- Independent Designer -->
+          <div class="tabs-panel is-active" id="independent">
+            <div class="row">
+                <div class="small-6 columns">
+                  <div>
+                    <h4>Independent Designer</h4>
+                    <h6><a href="http://www.adamkporter.com/" target="_blank">Freelance</a> • Various Locations • May 2016 - Present</h6>
+                    <p>Currently, I work as an Independent Designer based out of Portland, OR. My projects involve branding, website design, and print design. I take clients through projects from start to finish - creating briefs, timelines, budgets, and managing expectations.</p>
+                  </div>
+                </div>
+                <!-- Seperator -->
+                <div class="small-3 columns">
+                    <h4>Skills</h4>
+                    <h6>---</h6>
+                    <ul>
+                      <li>Project Management</li>
+                      <li>Creative Direction</li>
+                      <li>Branding &amp; Print Design</li>
+                      <li>Website Design &amp; Development</li>
+                      <li>Icon Design</li>
+                      <li>Communication &amp; Time Management</li>
+                    </ul> 
+                </div>
+                <!-- Seperator -->
+                <div class="small-3 columns">
+                    <h4>Software &amp; Languages</h4>
+                    <h6>---</h6>
+                    <ul>
+                      <li>Sketch 3</li>
+                      <li>Adobe Creative Cloud</li>
+                      <li>HTML5, CSS3, Sass</li>
+                      <li>WordPress</li>
+                      <li>MailChimp</li>
+                    </ul> 
+                </div>
+            </div>
+          </div>
+
+          <!-- Sporitng Innovations -->
+          <div class="tabs-panel" id="sporting">
+            <div class="row">
+                <div class="small-6 columns">
+                  <div>
+                    <h4>Product Design Intern</h4>
+                    <h6><a href="http://www.fanthreesixty.com/" target="_blank">Sporting Innovations (now FanThreeSixty)</a>  •  Kansas City, MO  •  June 2015 - August 2015</h6>                
+                    <p>At Sporting, I applied the full lifecycle of design into my workflow - implementing whiteboarding sessions, sketches, user flows, wireframes, high-fidelity mockups, and functional prototypes into my process. As a member of an agile-product team, I developed enhancements to Sporting’s UI kits and website.</p>
+                    <a href="http://www.adamkporter.com/sporting-innovations/" target="_blank">View Work</a>
+                  </div>
+                </div>
+                <!-- Seperator -->
+                <div class="small-3 columns">
+                    <h4>Skills</h4>
+                    <h6>---</h6>
+                    <ul>
+                      <li>User Flows</li>
+                      <li>Wireframes</li>
+                      <li>High-Fidelity Mockups</li>
+                      <li>Icon Design</li>
+                      <li>Print &amp; Digital Design</li>
+                    </ul>
+                </div>    
+                                <!-- Seperator -->
+                <div class="small-3 columns">
+                    <h4>Software &amp; Languages</h4>
+                    <h6>---</h6>
+                    <ul>
+                      <li>Sketch 3</li>
+                      <li>Adobe Creative Cloud</li>
+                      <li>HTML5, CSS3, Sass</li>
+                      <li>JavaScript</li>
+                      <li>MailChimp</li>
+                      <li>LucidChart</li>
+                    </ul> 
+                </div>
+            </div>
+          </div>
+          
+          <!-- Atelier Design & Print -->
+          <div class="tabs-panel" id="atelier">
+            <div class="row">
+                <div class="small-6 columns">
+                  <div>
+                    <h4>Designer &amp; Project Coordinator</h4>
+                    <h6>Atelier Design &amp; Print  •  McPherson, KS  •  May 2013 - May 2016</h6>
+                    <p>Atelier was my first design job. I started as a graphic designer, and as our team grew, I took over project coordinator responsibilities. I expanded our design services from basic logo development to strategic branding and website development. I also co-led the development of new internal processes, to make sure each project ended with a successful outcome.</p>
+                  </div>
+                </div>
+                <!-- Seperator -->
+                <div class="small-3 columns">
+                  <h4>Skills</h4>
+                  <h6>---</h6>
+                  <ul>
+                      <li>Project Coordination</li>
+                      <li>Creative Direction</li>
+                      <li>Graphic Design</li>
+                      <li>Website Design</li>
+                      <li>Branding</li>
+                      <li>Photography</li>
+                  </ul>
+                </div>
+                <!-- Seperator -->
+                <div class="small-3 columns">
+                    <h4>Software &amp; Languages</h4>
+                    <h6>---</h6>
+                    <ul>
+                      <li>Sketch 3</li>
+                      <li>Adobe Creative Cloud</li>
+                      <li>HTML5, CSS3, Sass</li>
+                      <li>MailChimp</li>
+                      <li>Asana</li>
+                      <li>Slack</li>
+                    </ul> 
+                </div>
+            </div>
+          </div>
+
+           <!-- Craft Coffee Parlor -->
+          <div class="tabs-panel" id="founder">
+            <div class="row">
+                <div class="small-6 columns">
+                  <div>
+                    <h4>Co-Founder</h4>
+                    <h6><a href="https://www.instagram.com/craftcoffeeparlor/" target="_blank">Craft Coffee Parlor</a>  •  McPherson, KS  •  October 2014 - December 2015</h6>
+                    <p>As a member of Craft Coffee Parlor's founding team, I researched, planned, executed and opened a fully-functional coffee shop in McPherson, KS. Early on, I planned Craft's positioning, equipment requirements, products and feasibility. I also maintained a database of our products to make data-driven business decisions.</p>
+                  </div>
+                </div>
+                <!-- Seperator -->
+                <div class="small-3 columns">
+                    <h4>Skills</h4>
+                    <h6>---</h6>
+                    <ul>
+                      <li>Product Management</li>
+                      <li>Leadership</li>
+                      <li>Marketing</li>
+                      <li>Database Management</li>
+                      <li>Event Coordination</li>
+                      <li>Customer Service</li>
+                      <li>Coffee Making :)</li>
+                    </ul>
+                </div>
+                <!-- Seperator -->
+                <div class="small-3 columns">
+                    <h4>Software</h4>
+                    <h6>---</h6>
+                    <ul>
+                      <li>Adobe Creative Cloud</li>
+                      <li>Square Dashboard</li>
+                      <li>Microsft Excel</li>
+                      <li>WordPress</li>
+                    </ul> 
+                </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- END Content -->
+
+      </div>
+
+    </div>
+
+
+<!-- Hobbies -->
+    <div class="row hobbies" id="hobbies">
+    <!-- <h1 class="label-light">Hobbies</h1> -->
+      <!-- Hobbies Navigation -->
+      <div class="large-10" id="hobbies-nav">
+        <h1 class="label-light">Interests</h1>
+        <p><strong>Outside of work</strong> I stay active with several outdoor activities – I snowboarded for the first time last year and plan to go out again this winter. I also like to go to the beach, hike, and fish. Along with this, I play ultimate frisbee, soccer, basketball, go on long runs, and watch a lot of soccer.</p>
+        
+        <p>When I'm not doing something active, I usually can be found reading anything by Malcolm Gladwell, learning new things from Team Treehouse, taking photos on my Canaon 7D, spending time with friends, trying different types of coffee, or researching real estate.</p>
+      </div>
+
+      <div class="large-4">
+        <img src="img/ethiopia.jpg">
+      </div>
+
+      <div class="large-4">
+        <img src="img/allschoolsday2.jpg">
+      </div>
+
+      <div class="large-4">
+        <img src="img/hiking.jpg">
+      </div>
+      
+      <!-- Seperator -->
+      <div class="large-4">
+        <img src="img/kansas.jpg">
+      </div>
+
+      <div class="large-4">
+        <img src="img/photogrpahy.jpg">
+      </div>
+
+      <div class="large-4">
+        <img src="img/soccer.jpg">
+      </div>
+      
+      <!-- Seperator -->
+<!--       <div class="large-4">
+        <img src="img/kansas.jpg">
+      </div>
+
+      <div class="large-4">
+        <img src="img/photogrpahy.jpg">
+      </div>
+
+      <div class="large-4">
+        <img src="img/soccer.jpg">
+      </div> -->
+    </div>
+
+
+    <div class="row contact" id="contact">
+      <p>Thanks again for taking the time to learn more about me. If you haven't already, you can view my portfolio at <a href="www.adamkporter.com">www.adamkporter.com</a>. I'd love to talk to you more about my goals, skills, and how I may contribute to your team. I'm available via <a href="mailto:adam@adamkporter.com">email</a> or by phone at <a href="tel:16202457208">+1 (620) 245-7208</a>. I look forward to hearing from you.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

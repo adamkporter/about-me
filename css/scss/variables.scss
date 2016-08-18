@@ -1,0 +1,64 @@
+$charcoal: #343B41;
+
+
+
+h3 {
+	font-family: 'Merriweather', serif;
+	font-size: 24px;
+	text-transform: capitalize;
+	color: #343B41;
+	letter-spacing: 0px;
+	font-weight: 900;	
+	margin-bottom: 40px;
+}
+
+h4 {
+	font-family: 'Merriweather', serif;
+	font-size: 18px;
+	text-transform: capitalize;
+	color: #343B41;
+	letter-spacing: 0px;
+	font-weight: 900;
+}
+
+h5 {
+	font-family: 'Merriweather', serif;
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #343B41;
+	letter-spacing: 0px;
+	font-weight: 900;
+}
+
+h6 {
+	font-family: Merriweather-Italic;
+	font-size: 13px;
+	color: #343B41;
+	letter-spacing: 0px;
+	font-weight: 400;
+	line-height: 1.8;
+}
+
+p {
+	color: lighten($charcoal, 35%);
+	text-rendering: optimizeLegibility;
+	line-height: 1.8;
+}
+
+li {
+	color: lighten($charcoal, 35%);	
+}
+
+@mixin opacity-transition {
+  -webkit-transition: opacity ease-in-out .3s;
+     -moz-transition: opacity ease-in-out .3s;
+      -ms-transition: opacity ease-in-out .3s;
+          transition: opacity ease-in-out .3s;
+}
+
+@mixin all-transition {
+  -webkit-transition: all ease-in-out .2s;
+     -moz-transition: all ease-in-out .2s;
+      -ms-transition: all ease-in-out .2s;
+          transition: all ease-in-out .2s;	
+}
