@@ -400,3 +400,26 @@ body {
 	}
 }
 
+#error {
+	position: absolute;
+	width: 550px;
+	z-index: 15;
+	top: 50%;
+	left: 50%;
+	margin: -184px 0 0 -275px;
+	.label-light {
+		position: absolute;
+		z-index: 99;
+		margin-top: -80px;
+		right: 55px;
+		font-size: 120px;
+		opacity: .06;
+		letter-spacing: 8px;
+		font-family: "Roboto-Black";
+		text-transform: uppercase;
+	}
+	p {
+		text-align: center;
+		padding: 30px 0px;
+	}	
+}
