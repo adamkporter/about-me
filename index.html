@@ -18,6 +18,7 @@
     <!-- JS -->
     <script src="js/vendor/modernizr.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/mobile-menu.js"></script>
     
     <!-- Tracking -->
     <script>
@@ -48,9 +49,41 @@
               });
           });
 
+          $(function() {
+              var header = $(".title-bar");
+              $(window).scroll(function() {    
+                  var scroll = $(window).scrollTop();
+              
+                  if (scroll >= 350) {
+                      header.addClass("light");
+                      
+                  } else {
+                      header.removeClass("light").addClass('.title-bar');
+                  }
+              });
+          });
+
           $(window).scroll(function(){
             $(".hero").css("opacity", 1 - $(window).scrollTop() / 375);
           });
+
+          $(function() {
+              var header = $(".top-bar-right");
+              $(window).scroll(function() {    
+                  var scroll = $(window).scrollTop();
+              
+                  if (scroll >= 350) {
+                      header.addClass("light");
+                      
+                  } else {
+                      header.removeClass("light").addClass('.top-bar-right');
+                  }
+              });
+          });
+
+          $(window).scroll(function(){
+            $(".hero").css("opacity", 1 - $(window).scrollTop() / 375);
+          });          
     </script>
   </head>
   <body>
@@ -58,28 +91,26 @@
 <!-- Hero --> 
 <!-- Navigation Bar --> 
 
-    <div class="large-12 columns" id="background-grid">
-      <div class="small-2 columns"></div>
-      <div class="small-2 columns"></div>
+    <div id="top"></div>
+    <div class="title-bar large-12" data-responsive-toggle="example-menu" data-hide-for="large">
+      <button class="menu-icon" type="button" data-toggle></button>
+      <div class="title-bar-title" id="#top" data-magellan><a href="#top"><img src="img/logo.png"></a></div>
     </div>
 
-    <div class="row">
-      <div class="large-12 columns top-bar">
-        <div class="large-12 columns top-bar-right" id="navigation" data-sticky-container>
-         <!-- <nav class="columns sticky" data-sticky data-anchor="exampleId" data-sticky-on="large"> -->
-            <a href="#"><img src="img/logo.png"></a>
-            <a class="toggleMenu" href="#" style="display: none;">Menu</a>
-            <ul class="horizontal " data-magellan>
-              <li><a href="#education">Education</a></li>
-              <li><a href="#experience">Experience &amp; Skills</a></li>
-              <li><a href="#hobbies">Outside of Work</a></li>
-              <li><a href="#contact">Let's Talk!</a></li>
-              <li><a href="http://www.adamkporter.com" target="_blank">My Portfolio</a></li>
-            </ul>
-          <!-- </nav> -->
-        </div>
+    <div class="top-bar" id="example-menu">
+      <div class="top-bar-left" data-magellan id="navigation">
+        <a href="#top"><img src="img/logo.png"></a>
       </div>
-
+      <div class="top-bar-right" data-magellan>
+        <ul data-dropdown-menu>
+          <li><a href="#contact">Let's Talk!</a></li>
+          <li><a href="#hobbies">Outside of Work</a></li>
+          <li><a href="#experience">Experience &amp; Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <!-- <li><a href="http://www.adamkporter.com" target="_blank">My Portfolio</a></li> -->
+        </ul>
+      </div>
+    </div>
       
 <!-- Above the fold --> 
 
@@ -108,7 +139,7 @@
         <!-- K-State -->
           <div class="tabs-panel is-active" id="kstate">
             <div class="row">
-                <div class="small-6 columns">
+                <div class="large-6 columns left">
                   <div>
                     <h6><i>2010 - 2012</i></h6>
                     <h4>Entrepreneurship Major,<br>Track &amp; Cross Country</h4>
@@ -122,7 +153,7 @@
                   </div>
                 </div>
                 <!-- Seperator -->
-                <div class="small-6 columns">
+                <div class="large-6 columns right">
                   <div id="block"></div>
                   <div id="block2"></div>
                   <img src="img/catsa.jpg">
@@ -133,7 +164,7 @@
           <!-- Team Treehouse -->
           <div class="tabs-panel" id="treehouse">
             <div class="row">
-                <div class="small-6 columns">                  
+                <div class="large-6 columns">                  
                   <div>
                       <h6><i>2012 - 2013</i></h6>
                       <h4>Self-led Studies in<br>Design &amp; Technology</h4>              
@@ -149,7 +180,7 @@
 
                 </div>          
                 <!-- Seperator -->
-                <div class="small-6 columns">
+                <div class="large-6 columns right">
                   <div id="block3"></div>
                   <img src="img/tree.png">
                 </div>
@@ -159,7 +190,7 @@
           <!-- McPherson College -->
           <div class="tabs-panel" id="mc">
             <div class="row">
-                <div class="small-6 columns">
+                <div class="large-6 columns">
                   <div>
                     <h6><i>2014 - 2015</i></h6>
                     <h4>B.S. Visual Communications<br>Entrepreneurship Minor, 3.89</h4>
@@ -173,7 +204,7 @@
                   </div>
                 </div>
                 <!-- Seperator -->
-                <div class="small-6 columns">
+                <div class="large-6 columns right">
                   <div id="blockv"></div>
                   <div id="blockv2"></div>
                   <img src="img/mac.jpg">
@@ -208,7 +239,7 @@
         <!-- Independent Designer -->
           <div class="tabs-panel is-active" id="independent">
             <div class="row">
-                <div class="small-6 columns">
+                <div class="large-6">
                   <div>
                     <h4>Independent Designer</h4>
                     <h6><a href="http://www.adamkporter.com/" target="_blank">Freelance</a> • Various Locations • May 2016 - Present</h6>
@@ -216,7 +247,7 @@
                   </div>
                 </div>
                 <!-- Seperator -->
-                <div class="small-3 columns">
+                <div class="large-3">
                     <h4>Skills</h4>
                     <h6>---</h6>
                     <ul>
@@ -229,7 +260,7 @@
                     </ul> 
                 </div>
                 <!-- Seperator -->
-                <div class="small-3 columns">
+                <div class="large-3">
                     <h4>Software &amp; Languages</h4>
                     <h6>---</h6>
                     <ul>
@@ -246,7 +277,7 @@
           <!-- Sporitng Innovations -->
           <div class="tabs-panel" id="sporting">
             <div class="row">
-                <div class="small-6 columns">
+                <div class="large-6">
                   <div>
                     <h4>Product Design Intern</h4>
                     <h6><a href="http://www.fanthreesixty.com/" target="_blank">Sporting Innovations (now FanThreeSixty)</a>  •  Kansas City, MO  •  June 2015 - August 2015</h6>                
@@ -255,7 +286,7 @@
                   </div>
                 </div>
                 <!-- Seperator -->
-                <div class="small-3 columns">
+                <div class="large-3 columns">
                     <h4>Skills</h4>
                     <h6>---</h6>
                     <ul>
@@ -267,7 +298,7 @@
                     </ul>
                 </div>    
                                 <!-- Seperator -->
-                <div class="small-3 columns">
+                <div class="large-3 columns">
                     <h4>Software &amp; Languages</h4>
                     <h6>---</h6>
                     <ul>
@@ -285,7 +316,7 @@
           <!-- Atelier Design & Print -->
           <div class="tabs-panel" id="atelier">
             <div class="row">
-                <div class="small-6 columns">
+                <div class="large-6">
                   <div>
                     <h4>Designer &amp; Project Coordinator</h4>
                     <h6>Atelier Design &amp; Print  •  McPherson, KS  •  May 2013 - May 2016</h6>
@@ -293,7 +324,7 @@
                   </div>
                 </div>
                 <!-- Seperator -->
-                <div class="small-3 columns">
+                <div class="large-3 columns">
                   <h4>Skills</h4>
                   <h6>---</h6>
                   <ul>
@@ -306,7 +337,7 @@
                   </ul>
                 </div>
                 <!-- Seperator -->
-                <div class="small-3 columns">
+                <div class="large-3 columns">
                     <h4>Software &amp; Languages</h4>
                     <h6>---</h6>
                     <ul>
@@ -324,7 +355,7 @@
            <!-- Craft Coffee Parlor -->
           <div class="tabs-panel" id="founder">
             <div class="row">
-                <div class="small-6 columns">
+                <div class="large-6">
                   <div>
                     <h4>Co-Founder</h4>
                     <h6><a href="https://www.instagram.com/craftcoffeeparlor/" target="_blank">Craft Coffee Parlor</a>  •  McPherson, KS  •  October 2014 - December 2015</h6>
@@ -332,7 +363,7 @@
                   </div>
                 </div>
                 <!-- Seperator -->
-                <div class="small-3 columns">
+                <div class="large-3 columns">
                     <h4>Skills</h4>
                     <h6>---</h6>
                     <ul>
@@ -346,7 +377,7 @@
                     </ul>
                 </div>
                 <!-- Seperator -->
-                <div class="small-3 columns">
+                <div class="large-3 columns">
                     <h4>Software</h4>
                     <h6>---</h6>
                     <ul>
@@ -427,5 +458,9 @@
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/nav.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>
